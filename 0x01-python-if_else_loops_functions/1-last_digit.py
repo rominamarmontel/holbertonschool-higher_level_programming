@@ -5,9 +5,9 @@ if number >= 0:
     last = number % 10
 else:
     last = number % - 10
-if last > 5:
-    print("{0:d} is {1:d} and is greater than 5".format(number, last))
+if last < 5:
+    print("{:d} and is less than 6 and not 0".format(last))
 elif last == 0:
-    print("{:d} is 0 and is 0".format(number))
+    print("{:d} and is 0".format(last))
 else:
-    print("{0:d} is {1:d} and is less than 6 and not 0".format(number, last))
+    print("{:d} and is greater than 5".format(last))
