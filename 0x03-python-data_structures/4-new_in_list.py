@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
     new_list = ""
-    if idx < 0:
+    if idx < 0 and idx > len(my_list):
         return my_list
-    elif idx not in my_list or element >= 0:
+    else:
         new_list = my_list.copy()
         new_list[idx] = element
         return new_list
-    else:
-        return my_list
+
