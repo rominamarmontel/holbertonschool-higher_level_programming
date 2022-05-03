@@ -1,17 +1,18 @@
 #include "lists.h"
 #include <stdio.h>
 /**
- * is_palindrome: checks if a singly linked list is a palindrome.
- * @head: param
- * Return: 0 if it is not a palindrome, 1 if it is a palindrome
+ * is_palindrome - Return is a list s palindrome or not
+ * @head:  double ponter to head
+ *
+ * Return: 1 on success
  */
-
 int is_palindrome(listint_t **head)
 {
 	listint_t *temp = *head;
 	int idx = 0;
 	int i = 0;
 	int j = 0;
+	int check = 0;
 	int array[2048];
 
 	if (*head == NULL || (*head)->next == NULL)
@@ -28,10 +29,13 @@ int is_palindrome(listint_t **head)
 	{
 		if (array[i] != array[j])
 		{
-			return (1);
+			check = 1;
+			break;
 		}
 		i++;
 		j++;
 	}
-	return (0);
- }
+	if (check == 1)
+		return (0);
+	return (1);
+}
