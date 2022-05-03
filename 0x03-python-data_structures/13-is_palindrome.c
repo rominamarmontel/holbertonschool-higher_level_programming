@@ -15,8 +15,6 @@ int is_palindrome(listint_t **head)
 	int check = 0;
 	int array[2048];
 
-	if (*head == NULL || (*head)->next == NULL)
-		return (1);
 	while (temp)
 	{
 		array[idx] = temp->n;
