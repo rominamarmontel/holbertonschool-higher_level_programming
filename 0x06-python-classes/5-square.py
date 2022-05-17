@@ -36,7 +36,7 @@ class Square:
             self.__size = value
 
     def my_print(self):
-        if type(self.__size) is not int:
+        if self.__size == 0:
             print()
         else:
             for x in range(0, self.__size):
