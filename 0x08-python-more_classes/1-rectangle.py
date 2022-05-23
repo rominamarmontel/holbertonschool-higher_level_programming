@@ -7,14 +7,14 @@ class Rectangle:
 
     """
     def __init__(self, width=0, height=0):
-        """ Init a rectangle 
+        """ Init a rectangle
         Args:
             width: the width of the rectangle
             height: the height of the rectangle
         """
         self.height = height
         self.width = width
-        
+
     @property
     def width(self):
         """ The method : width
@@ -33,7 +33,7 @@ class Rectangle:
         elif value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-        
+
     @property
     def height(self):
         """ The method : height
