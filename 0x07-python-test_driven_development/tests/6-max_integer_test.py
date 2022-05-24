@@ -4,11 +4,12 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """test class of max_integer_tes.py
     """
     def test_max_integer(self):
-        """test method for max_integer
+        """test method for integers, strings
         """
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertEqual(max_integer([0, 1, 2, -3]), 2)
@@ -20,6 +21,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([3]), 3)
         self.assertEqual(max_integer(['a', 'b', 'c', 'd']), 'd')
         self.assertEqual(max_integer(['w', 'e', 'l', 'c']), 'w')
+        self.assertEqual(max_integer(), None)
 
-import unittest
-max_integer = __import__('6-max_integer').max_integer
+
+if __name__ == '__main__':
+    unittest.main()
