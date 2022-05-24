@@ -1,0 +1,34 @@
+The say_my_name module
+======================
+
+Using ``say_my_name``
+----------------------
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name(5, "Smith")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("John", 5)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("3", "5")
+My name is 3 5
+
+>>> say_my_name(float("inf"), "Smith")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(float("NaN"), "Smith")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(50)
+Traceback (most recent call last):
+TypeError: first_name must be a string
