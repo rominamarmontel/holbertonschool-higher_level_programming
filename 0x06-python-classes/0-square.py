@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-"""
-A class Square that defines a square
-
-"""
+""" Module Sqaure """
 
 
 class Square:
-    """
-   Definition of a Class Square
+    """ Definition of a Class Square
 
     """
     pass
