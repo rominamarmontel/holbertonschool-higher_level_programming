@@ -52,7 +52,15 @@ TypeError: print_sorted() takes 1 positional argument but 2 were given
 
 >>> del my_list
 
+>>> my_list = MyList(1)
+Traceback (most recent call last):
+TypeError: 'int' object is not iterable
+
 >>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
 
 >>> my_list = MyList()
 >>> my_list.append(-1)
@@ -67,4 +75,3 @@ TypeError: print_sorted() takes 1 positional argument but 2 were given
 >>> my_list.print_sorted()
 [-5, -4, -3, -2, -1]
 
->>> del my_list
