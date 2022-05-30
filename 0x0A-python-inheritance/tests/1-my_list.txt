@@ -53,6 +53,8 @@ TypeError: print_sorted() takes 1 positional argument but 2 were given
 >>> del my_list
 
 >>> my_list = MyList()
+
+>>> my_list = MyList()
 >>> my_list.append(-1)
 >>> my_list.append(-4)
 >>> my_list.append(-2)
