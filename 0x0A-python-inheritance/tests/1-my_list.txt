@@ -66,3 +66,5 @@ TypeError: print_sorted() takes 1 positional argument but 2 were given
 
 >>> my_list.print_sorted()
 [-5, -4, -3, -2, -1]
+
+>>> del my_list
