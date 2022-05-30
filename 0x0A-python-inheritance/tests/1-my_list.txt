@@ -13,10 +13,31 @@
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
-my_list[0]
+>>> my_list[0]
 1
 
-my_list.print_sorted("test")
+>>> my_list[0:2]
+[1, 4]
+
+>>> my_list[0:10]
+[1, 4, 2, 3, 5]
+
+>>> my_list[-1:]
+[5]
+
+>>> my_list[-1:0]
+[]
+
+>>> my_list[-1:3]
+[]
+
+>>> my_list[:-1]
+[1, 4, 2, 3]
+
+>>> my_list[-1:]
+[5]
+
+>>> my_list.print_sorted("test")
 Traceback (most recent call last):
 TypeError: print_sorted() takes 1 positional argument but 2 were given
 
