@@ -4,9 +4,9 @@ import os
 import sys
 import json
 
-from traitlets import Instance
-
-
+"""
+    Base class
+"""
 class Base:
     """ Define Class Base """
     __nb_objects = 0
