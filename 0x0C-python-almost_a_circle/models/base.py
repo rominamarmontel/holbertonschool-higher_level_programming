@@ -7,6 +7,8 @@ import json
 """
     Base class
 """
+
+
 class Base:
     """ Define Class Base """
     __nb_objects = 0
