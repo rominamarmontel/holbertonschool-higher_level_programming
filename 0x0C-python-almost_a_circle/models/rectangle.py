@@ -85,7 +85,7 @@ class Rectangle(Base):
             return print_string
         else:
             for y in range(self.__y):
-                print(" ")
+                print("")
             for height in range(self.__height):
                 for x in range(self.__x):
                     print(" ", end="")
