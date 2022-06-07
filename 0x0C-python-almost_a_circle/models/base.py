@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """ Module Base """
-import os
-import sys
 import json
-
+import os
+import csv
 """
     Base class
 """
@@ -34,12 +33,15 @@ class Base:
         """ Definition of static method save_to_file
             writes the JSON string representation of list_objs to a file """
         filename = cls.__name__ + ".json"
-        new_list_objs = []
-        for i in list_objs:
-            new_list_objs.append(i.to_dictionary())
-        make_string = cls.to_json_string(new_list_objs)
         with open(filename, 'w', encoding='utf-8') as f:
-            return f.write(make_string)
+            if list_objs is None:
+                return f.write(cls.to_json_string(None))
+            else:
+                new_list_objs = []
+                for i in list_objs:
+                    new_list_objs.append(i.to_dictionary())
+                make_string = cls.to_json_string(new_list_objs)
+                return f.write(make_string)
 
     @staticmethod
     def from_json_string(json_string):
