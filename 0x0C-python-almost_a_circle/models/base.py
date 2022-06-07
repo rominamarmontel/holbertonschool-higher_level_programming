@@ -3,8 +3,6 @@
 import os
 import sys
 import json
-import csv
-import turtle
 
 from traitlets import Instance
 
