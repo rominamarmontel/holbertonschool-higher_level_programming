@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Module Rectangle """
-from curses import keyname
 from sys import argv
 from models.base import Base
 
