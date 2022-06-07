@@ -2,7 +2,6 @@
 """ Module Base """
 import json
 import os
-import csv
 """
     Base class
 """
