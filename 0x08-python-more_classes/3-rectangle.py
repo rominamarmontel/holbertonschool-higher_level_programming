@@ -85,4 +85,3 @@ class Rectangle:
                 if x < self.__height - 1:
                     print_string += "\n"
             return print_string
-
