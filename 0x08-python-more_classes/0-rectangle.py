@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-""" Module Rectangle """
+"""
+    Module Rectangle
+"""
 
 
 class Rectangle:
-    """ Definition of a Class Rectangle
-
+    """
+    Definition of a Class Rectangle
     """
     pass
