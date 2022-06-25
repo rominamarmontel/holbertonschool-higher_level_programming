@@ -1,54 +1,63 @@
 #!/usr/bin/python3
-""" Module Rectangle """
+"""
+    Module Rectangle
+"""
 
 
 class Rectangle:
-    """ Definition of a Class Rectangle
-
     """
+        Definition of a Class Rectangle
+            Initializing number_of_instances to 0
+            Initializing print_symbol to #
+    """
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
-        """ Init a rectangle
-        Args:
-            width: the width of the rectangle
-            height: the height of the rectangle
         """
-        self.height = height
+        The instance method called when a new object is created
+        Args:
+            width : a private attribute
+            height : a private attribute
+        """
         self.width = width
+        self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
-        """ The method : width
-        Return : the width of rectangle
+        """
+        width getter
         """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """initializes the Rectangle
-        Args:
-            width : integer
+        """
+        width setter
         """
         if type(value) != int:
             raise TypeError("width must be an integer")
         elif value < 0:
             raise ValueError("width must be >= 0")
-        self.__width = value
+        else:
+            self.__width = value
 
     @property
     def height(self):
-        """ The method : height
-        Return : the height of rectangle
+        """
+        height getter
         """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """initializes the Rectangle
-        Args:
-            height : integer
+        """
+        height setter
         """
         if type(value) != int:
             raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value
+        else:
+            self.__height = value
