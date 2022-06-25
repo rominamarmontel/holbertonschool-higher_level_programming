@@ -6,13 +6,8 @@
 
 class Rectangle:
     """
-        Definition of a Class Rectangle
-            Initializing number_of_instances to 0
-            Initializing print_symbol to #
+    Definition of a Class Rectangle
     """
-    number_of_instances = 0
-    print_symbol = "#"
-
     def __init__(self, width=0, height=0):
         """
         The instance method called when a new object is created
