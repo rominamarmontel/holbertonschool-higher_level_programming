@@ -6,11 +6,11 @@ module.exports = class Square extends Rectangle {
   }
 
   charPrint (c) {
-    for (let i = 0; i < this.size; i++) {
-      if (c === 'C') {
-        console.log('C'.repeat(this.size));
+    for (let i = 0; i < this.width; i++) {
+      if (c === undefined) {
+        console.log('X'.repeat(this.width));
       } else {
-        console.log('X'.repeat(this.size));
+        console.log(c.repeat(this.width));
       }
     }
   }
