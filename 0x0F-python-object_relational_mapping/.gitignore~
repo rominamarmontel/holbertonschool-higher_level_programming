@@ -1,0 +1,5 @@
+# main file
+*.py
+
+# python cache
+__*__/

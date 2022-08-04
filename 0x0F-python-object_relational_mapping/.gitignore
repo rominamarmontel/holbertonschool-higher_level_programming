@@ -1,0 +1,6 @@
+# main file
+*.py~
+*.sql
+
+# python cache
+__*__/
