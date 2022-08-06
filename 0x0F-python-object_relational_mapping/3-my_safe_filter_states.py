@@ -14,10 +14,10 @@ if __name__ == "__main__":
         db=arg[3],
         charset="utf8")
     cursor = connection.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = '{:s}' ORDER BY id"
+    cursor.execute("SELECT * FROM states WHERE name = '{:s}'"
                    .format(arg[4],))
-    query_rows = cursor.fetchall()
-    for row in query_rows:
+    rows = cursor.fetchall()
+    for row in rows:
         if row[1] == arg[4]:
             print(row)
     cursor.close()
