@@ -17,8 +17,9 @@ if __name__ == "__main__":
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' \
                    ORDER BY states.id")
-    query_rows = cursor.fetchall()
-    for row in query_rows:
-        print(row)
+    rows = cursor.fetchall()
+    for row in rows:
+        if row[1] == 'N':
+            print(row)
     cursor.close()
     connection.close()
