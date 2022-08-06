@@ -15,12 +15,11 @@ if __name__ == "__main__":
         db=arg[3],
         charset="utf8")
     cursor = connection.cursor()
-    cursor.execute("SELECT *
-    FROM states
-    ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states WHERE NAME LIKE 'N%' \
+                   ORDER BY id")
     query_rows = cursor.fetchall()
     for row in query_rows:
-        if row[1][0] == 'N':
+        if row in query_rows:
             print(row)
     cursor.close()
     connection.close()
