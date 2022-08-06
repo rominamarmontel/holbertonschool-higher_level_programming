@@ -14,8 +14,8 @@ if __name__ == '__main__':
         charset="utf8")
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    query_rows = cursor.fetchall()
-    for row in query_rows:
+    rows = cursor.fetchall()
+    for row in rows:
         print(row)
     cursor.close()
     connection.close()

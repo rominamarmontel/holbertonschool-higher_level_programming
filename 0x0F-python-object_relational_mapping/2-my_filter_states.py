@@ -17,8 +17,8 @@ if __name__ == "__main__":
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM states WHERE name = '{}' \
                    ORDER BY id".format(arg[4]))
-    query_rows = cursor.fetchall()
-    for row in query_rows:
+    rows = cursor.fetchall()
+    for row in rows:
         if row[1] == arg[4]:
             print(row)
     cursor.close()
