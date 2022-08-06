@@ -14,7 +14,7 @@ if __name__ == "__main__":
         db=arg[3],
         charset="utf8")
     cursor = connection.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY id"\
+    cursor.execute("SELECT * FROM states WHERE name=%s ORDER BY id"\
                    .format(arg[4],))
     rows = cursor.fetchall()
     for row in rows:
