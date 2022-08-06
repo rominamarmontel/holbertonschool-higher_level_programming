@@ -19,7 +19,7 @@ if __name__ == "__main__":
                    ORDER BY states.id")
     rows = cursor.fetchall()
     for row in rows:
-        if row[1] == 'N':
+        if row[1][0] == 'N':
             print(row)
     cursor.close()
     connection.close()
