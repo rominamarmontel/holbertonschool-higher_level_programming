@@ -7,14 +7,18 @@ import sys
 
 if __name__ == "__main__":
     arg = sys.argv
-    conn = MySQLdb.connect(host="localhost", port=3306, user=arg[1],
-                           passwd=arg[2], db=arg[3], charset="utf8")
+    connection = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=arg[1],
+        passwd=arg[2],
+        db=arg[3],
+        charset="utf8")
     cursor = connection.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
-                   .format(arg[4]))
+    cursor.execute("SELECT * FROM states WHERE name = '{}' \
+                   ORDER BY id".format(arg[4]))
     query_rows = cursor.fetchall()
     for row in query_rows:
-        if row[1] == arg[4]:
-            print(row)
+        print(row)
     cursor.close()
     connection.close()
