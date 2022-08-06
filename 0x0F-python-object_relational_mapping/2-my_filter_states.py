@@ -19,6 +19,7 @@ if __name__ == "__main__":
                    ORDER BY id".format(arg[4]))
     query_rows = cursor.fetchall()
     for row in query_rows:
-        print(row)
+        if row[1] == arg[4]: 
+            print(row)
     cursor.close()
     connection.close()
