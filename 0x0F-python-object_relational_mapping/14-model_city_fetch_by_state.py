@@ -18,4 +18,4 @@ if __name__ == "__main__":
     session = Session(engine)
     for city, State in session.query(City, State).join(State).order_by(City.id):
         print("{}: ({}) {}".format(state.name, city.id, city.name))
-        session.close()
+    session.close()
