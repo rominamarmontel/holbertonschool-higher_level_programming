@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """displays the body of the response (decoded in utf-8)"""
-import urllib.parse
-import urllib.request
-import sys
+from urllib import request, parse
+from sys import argv
 
 
 if __name__ == "__main__":
