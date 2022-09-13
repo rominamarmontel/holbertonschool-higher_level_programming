@@ -6,8 +6,8 @@ axios.get(process.argv[2])
     let count = 0;
     const list = response.data.results;
     for (let i = 0; i < list.length; i++) {
-      for (let x = 0; x < list[i].length; x++) {
-        if (list[i].character[x].includes('/18/') === true) {
+      for (let x = 0; x < list[i].characters.length; x++) {
+        if (list[i].characters[x].includes('/18/') === true) {
           count++;
         }
       }
