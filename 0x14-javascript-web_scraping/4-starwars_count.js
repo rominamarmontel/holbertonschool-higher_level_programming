@@ -1,6 +1,4 @@
 #!/usr/bin/node
-//Write a script that prints the number of movies 
-//where the character “Wedge Antilles” is present
 const axios = require('axios').default;
 request.get(process.argv[2])
   .then(function (response) {

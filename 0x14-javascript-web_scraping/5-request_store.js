@@ -1,5 +1,4 @@
 #!/usr/bin/node
-//Write a script that gets the contents of a webpage and stores it in a file
 const axios = require('axios').default;
 const fs = require('fs');
 

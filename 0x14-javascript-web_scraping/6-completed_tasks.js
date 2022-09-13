@@ -1,5 +1,4 @@
 #!/usr/bin/node
-//Write a script that computes the number of tasks completed by user id
 const axios = require('axios').default;
 axios.get(process.argv[2])
     .then(function (response) {
