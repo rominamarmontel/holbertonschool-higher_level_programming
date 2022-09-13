@@ -1,10 +1,5 @@
 #!/usr/bin/node
 const fs = require('fs');
-const path = process.argv[2];
-fs.readFile(path, 'utf8', (err, data) => {
-  if (data) {
-    console.log(data);
-  } else {
-    console.log(err);
-  }
+fs.readFile(process.argv[2], 'utf8', function (error, data) {
+  console.log(error || data);
 });
