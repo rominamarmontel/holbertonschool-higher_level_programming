@@ -1,17 +1,19 @@
 #!/usr/bin/node
 const axios = require('axios').default;
-let count = 0;
+
 axios.get(process.argv[2])
   .then(function (response) {
-    response.data.results.forEach(element => {
-      for (let i = 0; i < element.characters.length; i++) {
-        if (element.characters[i].includes('people/18/')) { count++; }
+    let count = 0;
+    const list = response.data.results;
+    for (let i = 0; i < list.length; i++) {
+      for (let x = 0; x < list[i].character.length; x++) {
+        if (list[i].character[x].includes('/18/') === true) {
+          count++;
+        }
       }
-    });
+    }
+    console.log(count);
   })
   .catch(function (error) {
     console.log(error);
-  })
-  .then(function () {
-    console.log(count);
   });
