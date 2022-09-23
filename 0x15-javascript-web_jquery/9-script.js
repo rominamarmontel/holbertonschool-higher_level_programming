@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    $.get('https://stefanbohacek.com/hellosalut/?lang=fr', (data) => {
-      $('DIV#hello').text(data.hello);
-    });
+  $.get('https://stefanbohacek.com/hellosalut/?lang=fr', (data) => {
+    $('DIV#hello').text(data.hello);
   });
+});
